@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # create folder for virtual environment
 mkdir python-virtual-environments
 
