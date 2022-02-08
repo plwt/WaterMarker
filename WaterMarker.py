@@ -1,3 +1,13 @@
+#import pywhatkit as kit
+#import cv2
+
+#kit.text_to_handwriting("Hello World", saveto:"Hello World.png")
+#img=cv2.imread("Hello World.png")
+#cv2.imshow("Hello World",img)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
+
+
 from PIL import Image
 
 print("Welcome to WaterMarker")
