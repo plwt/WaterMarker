@@ -3,7 +3,10 @@
 # install requirements
 python3 pip install pillow
 
+# make folders
+mkdir -p ./WaterMark
+
 # run the script
-python3 WaterMarker.py
+python3 /opt/WaterMarker/src/WaterMarker.py
 
 sleep 30m
