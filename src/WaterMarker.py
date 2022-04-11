@@ -1,6 +1,6 @@
 # install pillow
 
-from PIL import Image
+from Pillow import Image
 
 print("Welcome to WaterMarker")
 print("Have you saved the file to be watermarked to the WaterMarker folder with filename image.png?(y/n)")
