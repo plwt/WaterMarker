@@ -1,5 +1,8 @@
 #!/bin/bash
 
+python3 -m venv venv
+source venv/bin/activate
+
 # install requirements
 python3 pip install pillow
 
