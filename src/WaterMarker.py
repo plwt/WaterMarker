@@ -13,7 +13,7 @@ while Gonogo=="n":
 
 if Gonogo=="y":
     words=Image.open('/opt/WaterMarker/src/home/WaterMark/image.png')
-    # words.putalpha(200)
+    # words.putalpha(255)
     hmat,wmat = words.size
     mask=Image.open('/opt/WaterMarker/src/watermark.png')
     mask.putalpha(150)
