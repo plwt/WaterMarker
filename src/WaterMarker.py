@@ -13,13 +13,13 @@ while Gonogo=="n":
 
 if Gonogo=="y":
     words=Image.open('/opt/WaterMarker/src/home/WaterMark/image.png')
-    words.putalpha(200)
+    # words.putalpha(200)
     hmat,wmat = words.size
     mask=Image.open('/opt/WaterMarker/src/watermark.png')
     mask.putalpha(150)
     complete=mask.resize((hmat,wmat))
     complete.paste(words,box=(0,0),mask=words)
-    complete.save("/opt/WaterMarker/src/home/WaterMark/watermarkedimage.png")
-    print("Your watermarked file has been saved to your desktop with filename watermarkedimage.png")
+    complete.save("/opt/WaterMarker/src/images/watermarkedimage.png")
+    print("Your watermarked file has been saved to /opt/WaterMarker/src/images/watermarkedimage.png")
 else:
     print("Thank you for using WaterMarker.")
