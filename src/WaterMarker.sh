@@ -4,7 +4,8 @@ python3 -m venv venv
 source venv/bin/activate
 
 # install requirements
-python pip install Pillow
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade Pillow
 
 # make folders
 mkdir -p ./home/WaterMark
