@@ -12,14 +12,18 @@ while Gonogo=="n":
     Gonogo=input()  
 
 if Gonogo=="y":
-    words=Image.open('/opt/WaterMarker/images/image.png')
-    words.putalpha(150)
-    hmat,wmat = words.size
+    words=Image.open('/opt/WaterMarker/images/image.jpg')
+    words.save("/opt/WaterMarker/images/temp.png")
+    words2=Image.open("/opt/WaterMarker/images/temp.png")
+    words2.putalpha(150)
+    hmat,wmat = words2.size
     mask=Image.open('/opt/WaterMarker/src/watermark.png')
+    # need to remove the grid from the mask
     mask.putalpha(255)
     complete=mask.resize((hmat,wmat))
-    complete.paste(words,box=(0,0),mask=words)
+    complete.paste(words2,box=(0,0),mask=words2)
     complete.save("/opt/WaterMarker/images/watermarkedimage.png")
+    # delete the temp file
     print("Your watermarked file has been saved to /opt/WaterMarker/images/watermarkedimage.png")
 else:
     print("Thank you for using WaterMarker.")
