@@ -22,7 +22,7 @@ if Gonogo=="y":
     mask.putalpha(255)
     complete=mask.resize((hmat,wmat))
     complete.paste(words2,box=(0,0),mask=words2)
-    complete.save("/opt/WaterMarker/images/watermarkedimage.png")
+    complete.save("/opt/WaterMarker/images/watermarkedimage.jpg")
     # delete the temp file
     print("Your watermarked file has been saved to /opt/WaterMarker/images/watermarkedimage.png")
 else:
