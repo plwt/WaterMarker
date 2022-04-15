@@ -2,6 +2,8 @@
 
 from PIL import Image
 
+import OS
+
 print("Welcome to WaterMarker")
 print("Have you saved the file to be watermarked to the WaterMarker folder with filename image.png?(y/n)")
 
@@ -22,7 +24,8 @@ if Gonogo=="y":
     complete=mask.resize((hmat,wmat))
     complete.paste(words2,box=(0,0),mask=words2)
     complete.save("/opt/WaterMarker/images/watermarkedimage.png")
-    # delete the temp file
+    path = "/opt/WaterMarker/images/temp.png"
+    os.remove(path)
     print("Your watermarked file has been saved to /opt/WaterMarker/images/watermarkedimage.png")
 else:
     print("Thank you for using WaterMarker.")
