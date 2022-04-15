@@ -18,7 +18,6 @@ if Gonogo=="y":
     words2.putalpha(250)
     hmat,wmat = words2.size
     mask=Image.open('/opt/WaterMarker/src/watermark.png')
-    # need to remove the grid from the mask
     mask.putalpha(255)
     complete=mask.resize((hmat,wmat))
     complete.paste(words2,box=(0,0),mask=words2)
