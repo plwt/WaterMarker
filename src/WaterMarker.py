@@ -25,7 +25,7 @@ if Gonogo=="y":
     complete.paste(words2,box=(0,0),mask=words2)
     complete.save("/opt/WaterMarker/images/watermarkedimage.png")
     path = "/opt/WaterMarker/images/temp.png"
-    os.remove(path)
+    os.remove("/opt/WaterMarker/images/temp.png")
     print("Your watermarked file has been saved to /opt/WaterMarker/images/watermarkedimage.png")
 else:
     print("Thank you for using WaterMarker.")
