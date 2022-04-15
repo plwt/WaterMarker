@@ -30,4 +30,3 @@ elif Gonogo=="y":
     print("Your watermarked file has been saved to /opt/WaterMarker/images/watermarkedimage.png")
 else:
     print("Thank you for using WaterMarker.")
-    break
