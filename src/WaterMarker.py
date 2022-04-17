@@ -17,15 +17,15 @@ def make_watermark():
 
     width = 512
     height = 512
-    message = input("Enter your message: ")
-    font = ImageFont.truetype("arial.ttf", size=20)
-    img = Image.new('RGB', (width, height), color='blue')
+    message = input("Enter your message (one word is best): ")
+    font = ImageFont.truetype("arial.ttf", size=30)
+    img = Image.new('RGBA', (width, height), (255, 0, 0, 0))
     imgDraw = ImageDraw.Draw(img)
     textWidth, textHeight = imgDraw.textsize(message, font=font)
     xText = (width - textWidth) / 2
     yText = (height - textHeight) / 2
 
-    imgDraw.text((xText, yText), message, font=font, fill=(255, 255, 0))
+    imgDraw.text((xText, yText), message, font=font, fill=(255, 255, 255, 250))
 
     img.save('/opt/WaterMarker/src/watermark.png')
 
