@@ -2,7 +2,7 @@
 
 from PIL import Image, ImageDraw, ImageFont
 
-import OS
+import os
 
 def welcome():
     print("""
@@ -18,7 +18,7 @@ def make_watermark():
     width = 512
     height = 512
     message = input("Enter your message (one word is best): ")
-    font = ImageFont.truetype("arial.ttf", size=30)
+    font = ImageFont.truetype("/usr/share/fonts/truetype/noto/NotoSansElbasan-Regular.ttf", size=30)
     img = Image.new('RGBA', (width, height), (255, 0, 0, 0))
     imgDraw = ImageDraw.Draw(img)
     textWidth, textHeight = imgDraw.textsize(message, font=font)
@@ -38,11 +38,15 @@ def watermarker():
     
     if Gonogo=="n":
         print("Please save the image to be watermarked to the WaterMarker folder in your user documents with the filename image.jpg and run WaterMarker again.")
-        break  
+          
 
     elif Gonogo=="y":
+        
+        # Open the original image and save it as temporary.png
         original=Image.open('/opt/WaterMarker/images/image.jpg')
         original.save("/opt/WaterMarker/images/temp.png")
+        
+        # Open the temporary .png and set alpha
         original2=Image.open("/opt/WaterMarker/images/temp.png")
         original2.putalpha(250)
         hmat,wmat = original2.size
