@@ -17,10 +17,7 @@ mkdir /opt/WaterMarker/images
 # run the script
 python3 /opt/WaterMarker/src/WaterMarker.py
 
-# copy file 
-cp ~/WaterMarker/image.jpg /opt/WaterMarker/images/image.jpg
-
-sleep 30m
+sleep 5m
 
 deactivate
 
