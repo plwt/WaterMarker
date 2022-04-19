@@ -50,10 +50,10 @@ def watermarker():
         original2=Image.open("/opt/WaterMarker/images/temp.png")
         original2.putalpha(250)
         hmat,wmat = original2.size
-        watermark=Image.open('/opt/WaterMarker/src/watermark.png')
-        watermark.putalpha(255)
-        complete=watermark.resize((hmat,wmat))
-        complete.paste(original2,box=(0,0),watermark=original2)
+        wm=Image.open('/opt/WaterMarker/src/watermark.png')
+        wm.putalpha(255)
+        complete=wm.resize((hmat,wmat))
+        complete.paste(original2,box=(0,0),wm=original2)
         complete.save("/opt/WaterMarker/images/watermarkedimage.png")
         path = "/opt/WaterMarker/images/temp.png"
         os.remove("/opt/WaterMarker/images/temp.png")
