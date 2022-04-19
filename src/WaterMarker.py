@@ -11,8 +11,6 @@ def welcome():
 
 welcome()
 
-
-
 def make_watermark():
 
     width = 512
@@ -43,17 +41,17 @@ def watermarker():
     elif Gonogo=="y":
         
         # Open the original image and save it as temporary.png
-        original=Image.open('/opt/WaterMarker/images/image.jpg')
-        original.save("/opt/WaterMarker/images/temp.png")
+        words=Image.open('/opt/WaterMarker/images/image.jpg')
+        words.save("/opt/WaterMarker/images/temp.png")
         
         # Open the temporary .png and set alpha
-        original2=Image.open("/opt/WaterMarker/images/temp.png")
-        original2.putalpha(250)
-        hmat,wmat = original2.size
-        wm=Image.open('/opt/WaterMarker/src/watermark.png')
-        wm.putalpha(255)
-        complete=wm.resize((hmat,wmat))
-        complete.paste(original2,box=(0,0),wm=original2)
+        words2=Image.open("/opt/WaterMarker/images/temp.png")
+        words2.putalpha(250)
+        hmat,wmat = words2.size
+        mask=Image.open('/opt/WaterMarker/src/watermark.png')
+        mask.putalpha(255)
+        complete=mask.resize((hmat,wmat))
+        complete.paste(words2,box=(0,0),mask=words2)
         complete.save("/opt/WaterMarker/images/watermarkedimage.png")
         path = "/opt/WaterMarker/images/temp.png"
         os.remove("/opt/WaterMarker/images/temp.png")
