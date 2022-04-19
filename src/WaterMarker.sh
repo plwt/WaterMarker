@@ -8,13 +8,11 @@ source venv/bin/activate
 # install requirements
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
+python3 -m pip install --upgrade pathlib
 
-# make folder
+# make folders
 mkdir -p ~/WaterMarker
 mkdir /opt/WaterMarker/images
-
-# symbolic link
-# ln -s /opt/WaterMarker/images ~/WaterMarker/
 
 # run the script
 python3 /opt/WaterMarker/src/WaterMarker.py
