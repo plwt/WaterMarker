@@ -11,6 +11,7 @@ python3 -m pip install --upgrade Pillow
 
 # make folder
 mkdir -p ~/WaterMarker
+mkdir /opt/WaterMarker/Images
 
 # symbolic link
 ln -s /opt/WaterMarker/images ~/WaterMarker/
