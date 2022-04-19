@@ -14,7 +14,7 @@ mkdir -p ~/WaterMarker
 mkdir /opt/WaterMarker/images
 
 # symbolic link
-ln -s /opt/WaterMarker/images ~/WaterMarker/
+# ln -s /opt/WaterMarker/images ~/WaterMarker/
 
 # run the script
 python3 /opt/WaterMarker/src/WaterMarker.py
