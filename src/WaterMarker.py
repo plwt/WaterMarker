@@ -50,7 +50,7 @@ def watermarker():
         
         # Open the temporary .png and set alpha
         words=Image.open("/opt/WaterMarker/images/temp.png")
-        words.putalpha(230)
+        words.putalpha(225)
         hmat,wmat = words.size
         mask=Image.open('/opt/WaterMarker/src/watermark.png')
         mask.putalpha(255)
